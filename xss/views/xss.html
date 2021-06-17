@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>xss 反射型 {{ foo }}</h1>
+        <form action="/" method="GET">
+            <div><label for="">输入内容开始搜索</label><input type="text" name="search"></div>
+            <div><button>搜索</button></div>
+        </form>
+        {{if search}}
+        <div>
+            {{@search}} 搜索结果如下
+            <ul>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+            </ul>
+        </div>
+        {{/if}}
+    </div>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                
+            }
+        })
+    </script>
+</body>
+
+</html>

